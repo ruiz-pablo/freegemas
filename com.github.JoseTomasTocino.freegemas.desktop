@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Freegemas
+Comment=Freegemas: An open source version of the well known Bejeweled
+Icon=com.github.JoseTomasTocino.freegemas.yml
+Terminal=false
+Exec=freegemas
+Categories=Game;
