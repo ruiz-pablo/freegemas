@@ -10,6 +10,9 @@ finish-args:
 modules:
   - name: sdl2
     buildsystem: autotools
+    build-options:
+      strip: true
+      no-debuginfo: true
     sources:
       - type: archive
         url: https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-2.32.8.tar.gz
@@ -18,6 +21,9 @@ modules:
 
   - name: sdl2_image
     buildsystem: autotools
+    build-options:
+      strip: true
+      no-debuginfo: true
     sources:
       - type: archive
         url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.8/SDL2_image-2.8.8.tar.gz
@@ -26,6 +32,9 @@ modules:
 
   - name: sdl2_mixer
     buildsystem: autotools
+    build-options:
+      strip: true
+      no-debuginfo: true
     sources:
       - type: archive
         url: https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1.tar.gz
@@ -34,22 +43,20 @@ modules:
 
   - name: sdl2_ttf
     buildsystem: autotools
+    build-options:
+      strip: true
+      no-debuginfo: true
     sources:
       - type: archive
         url: https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.24.0/SDL2_ttf-2.24.0.tar.gz
         archive-type: tar-gzip
         sha256: 0b2bf1e7b6568adbdbc9bb924643f79d9dedafe061fa1ed687d1d9ac4e453bfd
 
-  - name: sdl2_image
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.8/SDL2_image-2.8.8.tar.gz
-        archive-type: tar-gzip
-        sha256: 2213b56fdaff2220d0e38c8e420cbe1a83c87374190cba8c70af2156097ce30a
-
   - name: jsoncpp
     buildsystem: meson
+    build-options:
+      strip: true
+      no-debuginfo: true
     sources:
       - type: archive
         url: https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.9.8.tar.gz
@@ -62,9 +69,11 @@ modules:
   #  - make sure all flathub rule are addressed
   - name: freegemas
     buildsystem: cmake
+    build-options:
+      strip: true
+      no-debuginfo: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
-    strip: true
     sources:
       - type: dir
         path: .
